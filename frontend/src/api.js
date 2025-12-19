@@ -1,4 +1,4 @@
-const BASE = "http://localhost:8000";
+const BASE = "https://fooddash-f7m3.onrender.com";;
 
 export const login = (u) =>
   fetch(`${BASE}/login?username=${u}`, { method: "POST" }).then(r => r.json());
