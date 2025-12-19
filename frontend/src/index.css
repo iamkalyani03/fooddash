@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme Colors */
+:root {
+  --bg: #FDF5E6;         /* Warm Cream background */
+  --primary: #E2725B;    /* Terracotta: buttons/prices/toasts */
+  --secondary: #87A96B;  /* Sage Green: navbar/icons */
+  --text: #2E2E2E;
+  --card: #ffffff;
+  --shadow: rgba(160, 90, 60, 0.25);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px var(--shadow);
+}
+
+/* Primary Button */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(228, 87, 46, 0.45);
+}
+
+/* Add-to-cart pop animation */
+.pop {
+  animation: pop 0.25s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+/* Toast Notifications */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: white;
+  padding: 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: slideIn 0.4s ease;
+  z-index: 50;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(120%); }
+  to { transform: translateX(0); }
+}
