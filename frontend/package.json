@@ -10,7 +10,7 @@
     "serve": "^14.2.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build -l 10000",
     "build": "react-scripts build"
   },
   "browserslist": {
